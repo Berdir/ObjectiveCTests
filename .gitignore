@@ -1,5 +1,5 @@
 #See shanesbrain.net/2008/7/9/using-xcode-with-git
-build/*
+build
 *.pbxuser
 *.mode1v3
 *.DS_Store

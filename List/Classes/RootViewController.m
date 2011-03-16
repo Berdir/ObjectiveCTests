@@ -8,6 +8,7 @@
 
 #import "RootViewController.h"
 #import "Detail.h"
+#import "MBProgressHUD.h"
 
 
 @implementation RootViewController
@@ -161,6 +162,38 @@
     // For example: self.myOutlet = nil;
 }
 
+- (IBAction)update:(id)sender {
+    // The hud will dispable all input on the view (use the higest view possible in the view hierarchy)
+    HUD = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+	
+    // Add HUD to screen
+    [self.navigationController.view addSubview:HUD];
+	
+    // Regisete for HUD callbacks so we can remove it from the window at the right time
+    HUD.delegate = self;
+	
+    HUD.labelText = @"Updating";
+    HUD.detailsLabelText = @"Downloading...";
+	
+    // Show the HUD while the provided method executes in a new thread
+    [HUD showWhileExecuting:@selector(runUpdate) onTarget:self withObject:nil animated:YES];
+}
+
+- (void) runUpdate {
+    sleep(2);
+    HUD.detailsLabelText = @"Processing...";
+    sleep(3);
+
+}
+
+#pragma mark -
+#pragma mark MBProgressHUDDelegate methods
+
+- (void)hudWasHidden {
+    // Remove HUD from screen when the HUD was hidded
+    [HUD removeFromSuperview];
+    [HUD release];
+}
 
 - (void)dealloc {
     [super dealloc];

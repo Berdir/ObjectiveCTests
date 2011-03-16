@@ -1,0 +1,3 @@
+[submodule "List/BProgressHUD"]
+	path = List/BProgressHUD
+	url = git://github.com/matej/MBProgressHUD.git

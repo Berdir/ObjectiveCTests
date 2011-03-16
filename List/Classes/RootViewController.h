@@ -7,8 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MBProgressHUD.h"
 
-@interface RootViewController : UITableViewController {
+
+@interface RootViewController : UITableViewController <MBProgressHUDDelegate> {
+    MBProgressHUD *HUD;
 }
+
+- (IBAction) update:(id) sender;
+
+
+- (void)runUpdate;
 
 @end

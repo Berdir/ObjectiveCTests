@@ -31,10 +31,18 @@
 	
 	label.text = selectedPresentation;
 	self.navigationItem.title = @"Selected Presentation";
+    self.navigationController.toolbar.hidden = TRUE;
+    self.navigationController.navigationBar.tintColor = [UIColor redColor];
+    //self.navigationController.navigationBar.hidden = TRUE;
+    
 }
 
-- click: (id) sender {
-  [[self navigationController] popViewControllerAnimated:YES];	
+- (void)click: (id) sender {
+    self.navigationController.toolbar.hidden = FALSE;
+    //self.navigationController.navigationBar.hidden = FALSE;
+    
+    self.navigationController.navigationBar.tintColor = [UIColor colorWithHue:0.6 saturation:0.33 brightness:0.69 alpha:0];
+    [[self navigationController] popViewControllerAnimated:YES];	
 }
 
 

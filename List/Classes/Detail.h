@@ -16,7 +16,7 @@
 	NSString *selectedPresentation;
 }
 
-- click: (id) sender;
+- (void)click: (id) sender;
 
 @property (nonatomic, retain) NSString *selectedPresentation;
 

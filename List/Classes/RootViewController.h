@@ -11,4 +11,6 @@
 @interface RootViewController : UITableViewController {
 }
 
+- (void) update:(id) sender;
+
 @end

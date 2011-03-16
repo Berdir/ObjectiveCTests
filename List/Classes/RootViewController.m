@@ -82,6 +82,7 @@
     
 	// Configure the cell.
 	[cell.textLabel setText: [NSString stringWithFormat:@"Führungsablauf %i", [indexPath row]]];
+    cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
 
@@ -93,13 +94,6 @@
 	[dvController release];
 	dvController = nil;
 }
-	 
-	 //RootViewController.m
-	 - (UITableViewCellAccessoryType)tableView:(UITableView *)tableView accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath {
-		 
-		 //return UITableViewCellAccessoryDetailDisclosureButton;
-		 return UITableViewCellAccessoryDisclosureIndicator;
-	 }
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
 	

@@ -9,15 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "AsyncUdpSocket.h"
 
-@interface UDPViewController : UIViewController {
+@interface UDPViewController : UIViewController <AsyncUdpSocketDelegate> {
     //Instance for sending UDP packages over the network
     AsyncUdpSocket *_udpSocket;
-    IBOutlet UITextField *ip;
-    IBOutlet UITextField *port;
-    IBOutlet UITextField *command;
-    IBOutlet UITextView *log;
+    IBOutlet UITextField *labelip;
+    IBOutlet UITextField *labelport;
+    IBOutlet UITextField *labelcommand;
+    IBOutlet UITextView *labellog;
 }
 
 - (IBAction) send: (id) sender;
+- (BOOL)onUdpSocket:(AsyncUdpSocket *)sock didReceiveData:(NSData *)data withTag:(long)tag fromHost:(NSString *)host port:(UInt16)port;
 
 @end

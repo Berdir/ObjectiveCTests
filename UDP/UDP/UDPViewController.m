@@ -34,17 +34,10 @@
     [_udpSocket bindToPort:4321 error:nil];
 }
 
-- (void)onSocket:(AsyncUdpSocket *)sock didReadData:(NSData *)data withTag:(long)tag {
-    NSLog(@"Received");
-    NSString *plainString = [NSString stringWithCString:[data bytes]];
-    [log setText:plainString];
-    
-}
-
--(BOOL)onUdpSocket:(AsyncUdpSocket *)sock didReceiveData:(NSData *)data withTag:(long) fromHost:(NSString *)host port:(UInt16)port {
-    NSLog(@"Received");
-    NSString *plainString = [NSString stringWithCString:[data bytes]];
-    [log setText:plainString];
+- (BOOL)onUdpSocket:(AsyncUdpSocket *)sock didReceiveData:(NSData *)data withTag:(long)tag fromHost:(NSString *)host port:(UInt16)port {
+    NSString *response = [NSString stringWithCString:[data bytes] encoding:NSASCIIStringEncoding];
+    NSString *line = [NSString stringWithFormat:@"Got '%@' from %@:%i\n", response, host, port];
+    labellog.text = [labellog.text stringByAppendingString:line];
     return TRUE;
 }
 
@@ -63,9 +56,10 @@
 }
 
 - (IBAction) send:(id)sender {
-    NSData *data = [command.text dataUsingEncoding: NSASCIIStringEncoding];
+    NSData *data = [labelcommand.text dataUsingEncoding: NSASCIIStringEncoding];
 
-    [_udpSocket sendData:data toHost:ip.text port:[port.text intValue] withTimeout:-1 tag:1];
+    [_udpSocket sendData:data toHost:labelip.text port:[labelport.text intValue] withTimeout:-1 tag:1];
+    [_udpSocket receiveWithTimeout:10 tag:1];
 }
 
 @end

@@ -24,9 +24,9 @@ int _count = 1;
 	//NSURL* movieURL = [[NSURL fileURLWithPath:fileName] retain];
 	
 	
-	//NSURL* movieURL = [NSURL URLWithString:@"http://user.enterpriselab.ch/~tazimmer/kungfupigeon5.mov"];
+	NSURL* movieURL = [NSURL URLWithString:@"http://user.enterpriselab.ch/~tazimmer/kungfupigeon5.mov"];
 	
-	NSURL* movieURL = [NSURL URLWithString:@"http://cam3.zurich-airport.com/login.cgi?l=1&b=j"];
+	//NSURL* movieURL = [NSURL URLWithString:@"http://cam3.zurich-airport.com/login.cgi?l=1&b=j"];
 	MPMoviePlayerViewController *theMovie = [[MPMoviePlayerViewController alloc] initWithContentURL:movieURL];
 	
 	

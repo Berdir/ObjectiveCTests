@@ -204,6 +204,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = List_Prefix.pch;
 				INFOPLIST_FILE = "List-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PRODUCT_NAME = List;
 			};
 			name = Debug;
@@ -216,6 +217,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = List_Prefix.pch;
 				INFOPLIST_FILE = "List-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PRODUCT_NAME = List;
 				VALIDATE_PRODUCT = YES;
 			};

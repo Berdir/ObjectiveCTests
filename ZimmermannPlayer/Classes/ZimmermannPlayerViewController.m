@@ -8,6 +8,7 @@
 
 #import "ZimmermannPlayerViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
+#import <stdio.h>
 
 @implementation ZimmermannPlayerViewController
 
@@ -22,11 +23,13 @@ int _count = 1;
 	//NSString* fileName = [bundle pathForResource:@"kungfupigeon5" ofType:@"mov"];
 	//NSURL* movieURL = [[NSURL fileURLWithPath:fileName] retain];
 	
-	NSURL* movieURL = [NSURL URLWithString:@"http://user.enterpriselab.ch/~tazimmer/kungfupigeon5.mov"];
+	
+	//NSURL* movieURL = [NSURL URLWithString:@"http://user.enterpriselab.ch/~tazimmer/kungfupigeon5.mov"];
+	
+	NSURL* movieURL = [NSURL URLWithString:@"http://cam3.zurich-airport.com/login.cgi?l=1&b=j"];
 	MPMoviePlayerViewController *theMovie = [[MPMoviePlayerViewController alloc] initWithContentURL:movieURL];
-
-	//listener zum loggen einrichtren
-	//[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerCallback) name:MPMoviePlayerPlaybackDidFinishNotification object:theMovie.moviePlayer];
+	
+	
 	
 	theMovie.moviePlayer.scalingMode = MPMovieScalingModeAspectFit;	
 	[self presentMoviePlayerViewControllerAnimated: theMovie];
@@ -37,10 +40,12 @@ int _count = 1;
     //theMovie.scalingMode = MPMovieScalingModeAspectFill;
 	//[theMovie play];
 	
-		
-	//[theMovie release];
-		
-		
+	NSLog(@"button gedrückt");
+	
+	
+	//[[NSNotificationCenter defaultCenter] postNotificationName:@"TestNotification" object:self];
+	
+
 
 	
 
@@ -48,20 +53,11 @@ int _count = 1;
 
 - (void) playerCallback: (NSNotification*) anObject
 {
-	//[self dealloc];
 	//++_count;
 	
 	//self.meldung.text = [NSString stringWithFormat:@"%@%i",@"Fertig",_count];
 	
-	//MPMoviePlayerController *player = (MPMoviePlayerController *)[anObject object];
-	//[player stop];
-	
-	// Remove notifications
-	//[[NSNotificationCenter defaultCenter] removeObserver:self name:MPMoviePlayerPlaybackDidFinishNotification object:player];
-	
-	// Release the movie instance created in playMovieAtURL:
-	//player.movieControlMode = MPMovieControlModeHidden;
-	//[player release];
+	NSLog (@"Successfully received the test notification!");
 	
 	
 }

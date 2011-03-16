@@ -15,6 +15,7 @@
 
 @property (readwrite, retain) IBOutlet UILabel* meldung;
 - (IBAction) filmAbspielen;
+- (void) playerCallback: (NSNotification*) anObject;
 
 @end
 

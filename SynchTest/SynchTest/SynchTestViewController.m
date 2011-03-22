@@ -172,7 +172,7 @@
         // choose to cancel the resolve by selecting another service in the table view.
         [self.currentResolve resolveWithTimeout:0.0];
         
-        statusLabel.text = [NSString stringWithFormat: @"Connectiong to %@", service.name];
+        statusLabel.text = [NSString stringWithFormat: @"Connecting to %@", service.name];
     }
 }	
 
@@ -186,6 +186,16 @@
 	
 	[service retain];
 	[self stopCurrentResolve];
+    
+    statusLabel.text = [NSString stringWithFormat: @"Connected with %@!", service.name];
+    
+	// note the following method returns _inStream and _outStream with a retain count that the caller must eventually release
+	if (![service getInputStream:&_inStream outputStream:&_outStream]) {
+		statusLabel.text = @"Failed connecting to server";
+		return;
+	}
+    
+	[self openStreams];
 	
 	[service release];
 }
@@ -207,6 +217,8 @@
 	_outStream.delegate = self;
 	[_outStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
 	[_outStream open];
+    
+    statusLabel.text = @"Ready!";
 }
 
 - (void) browserViewController:(BrowserViewController *)bvc didResolveInstance:(NSNetService *)netService

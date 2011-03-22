@@ -56,5 +56,6 @@
 - (IBAction) down: (id) sender;
 - (void) setup;
 - (void) stopCurrentResolve;
+- (BOOL)searchForServicesOfType:(NSString *)type inDomain:(NSString *)domain;
 
 @end

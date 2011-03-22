@@ -100,7 +100,7 @@
     statusLabel.text = @"Finished setup";
     
     NSString *type = [TCPServer bonjourTypeFromIdentifier:kGameIdentifier];
-    statusLabel.text = [NSString stringWithFormat: @"Local name = %@", type];
+    [self searchForServicesOfType:type inDomain:@"local"];
 }
 
 // Creates an NSNetServiceBrowser that searches for services of a particular type in a particular domain.
@@ -298,11 +298,11 @@
 			
 		case NSStreamEventEndEncountered:
 		{
-			
+				
 			NSLog(@"%s", _cmd);
 			
 			statusLabel.text = @"Peer Disconnected!";
-            
+            	
 			break;
 		}
 	}

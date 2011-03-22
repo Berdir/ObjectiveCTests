@@ -136,7 +136,7 @@
 	// If a service went away, stop resolving it if it's currently being resolved,
 	// remove it from the list and update the table view if no more events are queued.
     
-    statusLabel.text = @"Removed Service";
+    //statusLabel.text = @"Removed Service";
 	
 	if (self.currentResolve && [service isEqual:self.currentResolve]) {
 		[self stopCurrentResolve];
@@ -187,13 +187,15 @@
 	[service retain];
 	[self stopCurrentResolve];
     
-    statusLabel.text = [NSString stringWithFormat: @"Connected with %@!", service.name];
     
 	// note the following method returns _inStream and _outStream with a retain count that the caller must eventually release
 	if (![service getInputStream:&_inStream outputStream:&_outStream]) {
 		statusLabel.text = @"Failed connecting to server";
 		return;
 	}
+    
+    
+    statusLabel.text = [NSString stringWithFormat: @"Connected with %@!", service.name];
     
 	[self openStreams];
 	
@@ -255,10 +257,12 @@
 
 - (IBAction) up:(id)sender {
     valueLabel.text = [NSString stringWithFormat:@"%d", [valueLabel.text intValue] + 1];
+    [self send:1];
 }
 
 - (IBAction) down: (id)sender {
     valueLabel.text = [NSString stringWithFormat:@"%d", [valueLabel.text intValue] - 1];
+    [self send:-1];
 }
 
 @end
@@ -297,6 +301,8 @@
 						statusLabel.text = @"Failed reading data from peer";
 				} else {
 					statusLabel.text = [NSString stringWithFormat: @"Got data: %s", b];
+                    valueLabel.text = [NSString stringWithFormat:@"%d", [valueLabel.text intValue] + b];
+                    
 				}
 			}
 			break;
@@ -344,6 +350,8 @@
 	[_inStream retain];
 	_outStream = ostr;
 	[_outStream retain];
+    
+    statusLabel.text = @"Was connected.";
 	
 	[self openStreams];
 }

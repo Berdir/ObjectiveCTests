@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B92D1BD01338B633000B9C5E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92D1BCF1338B633000B9C5E /* UIKit.framework */; };
+		B92D1BD21338B633000B9C5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92D1BD11338B633000B9C5E /* Foundation.framework */; };
+		B92D1BD41338B633000B9C5E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92D1BD31338B633000B9C5E /* CoreGraphics.framework */; };
+		B92D1BDA1338B633000B9C5E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B92D1BD81338B633000B9C5E /* InfoPlist.strings */; };
+		B92D1BDD1338B633000B9C5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B92D1BDC1338B633000B9C5E /* main.m */; };
+		B92D1BE01338B633000B9C5E /* SimulationModeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B92D1BDF1338B633000B9C5E /* SimulationModeAppDelegate.m */; };
+		B92D1BE31338B634000B9C5E /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B92D1BE11338B634000B9C5E /* MainWindow.xib */; };
+		B92D1BE61338B634000B9C5E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B92D1BE51338B634000B9C5E /* RootViewController.m */; };
+		B92D1BE91338B634000B9C5E /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B92D1BE71338B634000B9C5E /* RootViewController.xib */; };
+		B92D1BF01338B634000B9C5E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92D1BCF1338B633000B9C5E /* UIKit.framework */; };
+		B92D1BF11338B634000B9C5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92D1BD11338B633000B9C5E /* Foundation.framework */; };
+		B92D1BF21338B634000B9C5E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92D1BD31338B633000B9C5E /* CoreGraphics.framework */; };
+		B92D1BFA1338B634000B9C5E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B92D1BF81338B634000B9C5E /* InfoPlist.strings */; };
+		B92D1BFD1338B634000B9C5E /* SimulationModeTests.h in Resources */ = {isa = PBXBuildFile; fileRef = B92D1BFC1338B634000B9C5E /* SimulationModeTests.h */; };
+		B92D1BFF1338B634000B9C5E /* SimulationModeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B92D1BFE1338B634000B9C5E /* SimulationModeTests.m */; };
+		B92D1C0D1338C728000B9C5E /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = B92D1C0B1338C728000B9C5E /* Settings.m */; };
+		B92D1C0E1338C728000B9C5E /* Settings.xib in Resources */ = {isa = PBXBuildFile; fileRef = B92D1C0C1338C728000B9C5E /* Settings.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B92D1BF31338B634000B9C5E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B92D1BC21338B633000B9C5E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B92D1BCA1338B633000B9C5E;
+			remoteInfo = SimulationMode;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B92D1BCB1338B633000B9C5E /* SimulationMode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimulationMode.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B92D1BCF1338B633000B9C5E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B92D1BD11338B633000B9C5E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B92D1BD31338B633000B9C5E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B92D1BD71338B633000B9C5E /* SimulationMode-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimulationMode-Info.plist"; sourceTree = "<group>"; };
+		B92D1BD91338B633000B9C5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B92D1BDB1338B633000B9C5E /* SimulationMode-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimulationMode-Prefix.pch"; sourceTree = "<group>"; };
+		B92D1BDC1338B633000B9C5E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B92D1BDE1338B633000B9C5E /* SimulationModeAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimulationModeAppDelegate.h; sourceTree = "<group>"; };
+		B92D1BDF1338B633000B9C5E /* SimulationModeAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimulationModeAppDelegate.m; sourceTree = "<group>"; };
+		B92D1BE21338B634000B9C5E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		B92D1BE41338B634000B9C5E /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		B92D1BE51338B634000B9C5E /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		B92D1BE81338B634000B9C5E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+		B92D1BEF1338B634000B9C5E /* SimulationModeTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimulationModeTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B92D1BF71338B634000B9C5E /* SimulationModeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimulationModeTests-Info.plist"; sourceTree = "<group>"; };
+		B92D1BF91338B634000B9C5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B92D1BFB1338B634000B9C5E /* SimulationModeTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimulationModeTests-Prefix.pch"; sourceTree = "<group>"; };
+		B92D1BFC1338B634000B9C5E /* SimulationModeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimulationModeTests.h; sourceTree = "<group>"; };
+		B92D1BFE1338B634000B9C5E /* SimulationModeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimulationModeTests.m; sourceTree = "<group>"; };
+		B92D1C0A1338C728000B9C5E /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		B92D1C0B1338C728000B9C5E /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		B92D1C0C1338C728000B9C5E /* Settings.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Settings.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B92D1BC81338B633000B9C5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B92D1BD01338B633000B9C5E /* UIKit.framework in Frameworks */,
+				B92D1BD21338B633000B9C5E /* Foundation.framework in Frameworks */,
+				B92D1BD41338B633000B9C5E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B92D1BEB1338B634000B9C5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B92D1BF01338B634000B9C5E /* UIKit.framework in Frameworks */,
+				B92D1BF11338B634000B9C5E /* Foundation.framework in Frameworks */,
+				B92D1BF21338B634000B9C5E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B92D1BC01338B633000B9C5E = {
+			isa = PBXGroup;
+			children = (
+				B92D1BD51338B633000B9C5E /* SimulationMode */,
+				B92D1BF51338B634000B9C5E /* SimulationModeTests */,
+				B92D1BCE1338B633000B9C5E /* Frameworks */,
+				B92D1BCC1338B633000B9C5E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B92D1BCC1338B633000B9C5E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B92D1BCB1338B633000B9C5E /* SimulationMode.app */,
+				B92D1BEF1338B634000B9C5E /* SimulationModeTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B92D1BCE1338B633000B9C5E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B92D1BCF1338B633000B9C5E /* UIKit.framework */,
+				B92D1BD11338B633000B9C5E /* Foundation.framework */,
+				B92D1BD31338B633000B9C5E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B92D1BD51338B633000B9C5E /* SimulationMode */ = {
+			isa = PBXGroup;
+			children = (
+				B92D1BDE1338B633000B9C5E /* SimulationModeAppDelegate.h */,
+				B92D1BDF1338B633000B9C5E /* SimulationModeAppDelegate.m */,
+				B92D1BE11338B634000B9C5E /* MainWindow.xib */,
+				B92D1BE41338B634000B9C5E /* RootViewController.h */,
+				B92D1BE51338B634000B9C5E /* RootViewController.m */,
+				B92D1BE71338B634000B9C5E /* RootViewController.xib */,
+				B92D1BD61338B633000B9C5E /* Supporting Files */,
+				B92D1C0A1338C728000B9C5E /* Settings.h */,
+				B92D1C0B1338C728000B9C5E /* Settings.m */,
+				B92D1C0C1338C728000B9C5E /* Settings.xib */,
+			);
+			path = SimulationMode;
+			sourceTree = "<group>";
+		};
+		B92D1BD61338B633000B9C5E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B92D1BD71338B633000B9C5E /* SimulationMode-Info.plist */,
+				B92D1BD81338B633000B9C5E /* InfoPlist.strings */,
+				B92D1BDB1338B633000B9C5E /* SimulationMode-Prefix.pch */,
+				B92D1BDC1338B633000B9C5E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B92D1BF51338B634000B9C5E /* SimulationModeTests */ = {
+			isa = PBXGroup;
+			children = (
+				B92D1BFC1338B634000B9C5E /* SimulationModeTests.h */,
+				B92D1BFE1338B634000B9C5E /* SimulationModeTests.m */,
+				B92D1BF61338B634000B9C5E /* Supporting Files */,
+			);
+			path = SimulationModeTests;
+			sourceTree = "<group>";
+		};
+		B92D1BF61338B634000B9C5E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B92D1BF71338B634000B9C5E /* SimulationModeTests-Info.plist */,
+				B92D1BF81338B634000B9C5E /* InfoPlist.strings */,
+				B92D1BFB1338B634000B9C5E /* SimulationModeTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B92D1BCA1338B633000B9C5E /* SimulationMode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B92D1C021338B634000B9C5E /* Build configuration list for PBXNativeTarget "SimulationMode" */;
+			buildPhases = (
+				B92D1BC71338B633000B9C5E /* Sources */,
+				B92D1BC81338B633000B9C5E /* Frameworks */,
+				B92D1BC91338B633000B9C5E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimulationMode;
+			productName = SimulationMode;
+			productReference = B92D1BCB1338B633000B9C5E /* SimulationMode.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B92D1BEE1338B634000B9C5E /* SimulationModeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B92D1C051338B634000B9C5E /* Build configuration list for PBXNativeTarget "SimulationModeTests" */;
+			buildPhases = (
+				B92D1BEA1338B634000B9C5E /* Sources */,
+				B92D1BEB1338B634000B9C5E /* Frameworks */,
+				B92D1BEC1338B634000B9C5E /* Resources */,
+				B92D1BED1338B634000B9C5E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B92D1BF41338B634000B9C5E /* PBXTargetDependency */,
+			);
+			name = SimulationModeTests;
+			productName = SimulationModeTests;
+			productReference = B92D1BEF1338B634000B9C5E /* SimulationModeTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B92D1BC21338B633000B9C5E /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = B92D1BC51338B633000B9C5E /* Build configuration list for PBXProject "SimulationMode" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B92D1BC01338B633000B9C5E;
+			productRefGroup = B92D1BCC1338B633000B9C5E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B92D1BCA1338B633000B9C5E /* SimulationMode */,
+				B92D1BEE1338B634000B9C5E /* SimulationModeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B92D1BC91338B633000B9C5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B92D1BDA1338B633000B9C5E /* InfoPlist.strings in Resources */,
+				B92D1BE31338B634000B9C5E /* MainWindow.xib in Resources */,
+				B92D1BE91338B634000B9C5E /* RootViewController.xib in Resources */,
+				B92D1C0E1338C728000B9C5E /* Settings.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B92D1BEC1338B634000B9C5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B92D1BFA1338B634000B9C5E /* InfoPlist.strings in Resources */,
+				B92D1BFD1338B634000B9C5E /* SimulationModeTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B92D1BED1338B634000B9C5E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B92D1BC71338B633000B9C5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B92D1BDD1338B633000B9C5E /* main.m in Sources */,
+				B92D1BE01338B633000B9C5E /* SimulationModeAppDelegate.m in Sources */,
+				B92D1BE61338B634000B9C5E /* RootViewController.m in Sources */,
+				B92D1C0D1338C728000B9C5E /* Settings.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B92D1BEA1338B634000B9C5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B92D1BFF1338B634000B9C5E /* SimulationModeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B92D1BF41338B634000B9C5E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B92D1BCA1338B633000B9C5E /* SimulationMode */;
+			targetProxy = B92D1BF31338B634000B9C5E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B92D1BD81338B633000B9C5E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B92D1BD91338B633000B9C5E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B92D1BE11338B634000B9C5E /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B92D1BE21338B634000B9C5E /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		B92D1BE71338B634000B9C5E /* RootViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B92D1BE81338B634000B9C5E /* en */,
+			);
+			name = RootViewController.xib;
+			sourceTree = "<group>";
+		};
+		B92D1BF81338B634000B9C5E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B92D1BF91338B634000B9C5E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B92D1C001338B634000B9C5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B92D1C011338B634000B9C5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		B92D1C031338B634000B9C5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimulationMode/SimulationMode-Prefix.pch";
+				INFOPLIST_FILE = "SimulationMode/SimulationMode-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B92D1C041338B634000B9C5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimulationMode/SimulationMode-Prefix.pch";
+				INFOPLIST_FILE = "SimulationMode/SimulationMode-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B92D1C061338B634000B9C5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SimulationMode.app/SimulationMode";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimulationModeTests/SimulationModeTests-Prefix.pch";
+				INFOPLIST_FILE = "SimulationModeTests/SimulationModeTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		B92D1C071338B634000B9C5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SimulationMode.app/SimulationMode";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimulationModeTests/SimulationModeTests-Prefix.pch";
+				INFOPLIST_FILE = "SimulationModeTests/SimulationModeTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B92D1BC51338B633000B9C5E /* Build configuration list for PBXProject "SimulationMode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B92D1C001338B634000B9C5E /* Debug */,
+				B92D1C011338B634000B9C5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B92D1C021338B634000B9C5E /* Build configuration list for PBXNativeTarget "SimulationMode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B92D1C031338B634000B9C5E /* Debug */,
+				B92D1C041338B634000B9C5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B92D1C051338B634000B9C5E /* Build configuration list for PBXNativeTarget "SimulationModeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B92D1C061338B634000B9C5E /* Debug */,
+				B92D1C071338B634000B9C5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B92D1BC21338B633000B9C5E /* Project object */;
+}

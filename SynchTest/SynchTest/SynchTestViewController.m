@@ -205,8 +205,11 @@
 - (void) send:(const uint8_t)message
 {
     NSLog(@"Trying to send %d", message);
+    if (_outStream) {
+        NSLog(@"Outstream is open.");
+    }
 	if (_outStream && [_outStream hasSpaceAvailable]) {
-        NSLog(@"Stream is open");
+        NSLog(@"Stream has space");
 		if([_outStream write:(const uint8_t *)&message maxLength:sizeof(const uint8_t)] == -1) {
 			statusLabel.text = @"Failed sending data to peer";
         }

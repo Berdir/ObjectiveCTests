@@ -257,7 +257,7 @@
 
 - (IBAction) down: (id)sender {
     valueLabel.text = [NSString stringWithFormat:@"%d", [valueLabel.text intValue] - 1];
-    [self send:-1];
+    [self send:0];
 }
 
 - (void) stream:(NSStream *)stream handleEvent:(NSStreamEvent)eventCode
@@ -289,8 +289,13 @@
 					if ([stream streamStatus] != NSStreamStatusAtEnd)
 						statusLabel.text = @"Failed reading data from peer";
 				} else {
-					statusLabel.text = [NSString stringWithFormat: @"Got data: %s", b];
-                    valueLabel.text = [NSString stringWithFormat:@"%d", [valueLabel.text intValue] + b];
+					statusLabel.text = [NSString stringWithFormat: @"Got data: %d", b];
+                    if (b == 1) {
+                        valueLabel.text = [NSString stringWithFormat:@"%d", [valueLabel.text intValue] + 1];
+                    }
+                    else {
+                        valueLabel.text = [NSString stringWithFormat:@"%d", [valueLabel.text intValue] - 1];
+                    }
                     
 				}
 			}

@@ -19,8 +19,6 @@
 
 @implementation SynchTestViewController
 
-@synthesize bvc = _bvc;
-
 @synthesize ownEntry = _ownEntry;
 @synthesize showDisclosureIndicators = _showDisclosureIndicators;
 @synthesize currentResolve = _currentResolve;
@@ -65,6 +63,7 @@
 
 
 - (void)setup {
+    NSLog(@"Setup...");
     [_server release];
 	_server = nil;
 	
@@ -94,10 +93,10 @@
 	//Start advertising to clients, passing nil for the name to tell Bonjour to pick use default name
 	if(![_server enableBonjourWithDomain:@"local" applicationProtocol:[TCPServer bonjourTypeFromIdentifier:kGameIdentifier] name:nil]) {
 		//[self _showAlert:@"Failed advertising server"];
-        statusLabel.text = @"Failed advertising server";
+        NSLog(@"Failed advertising server");
 		return;
 	}	
-    statusLabel.text = @"Finished setup";
+    NSLog(@"Finished setup");
     
     NSString *type = [TCPServer bonjourTypeFromIdentifier:kGameIdentifier];
     [self searchForServicesOfType:type inDomain:@"local"];
@@ -136,8 +135,8 @@
 	// If a service went away, stop resolving it if it's currently being resolved,
 	// remove it from the list and update the table view if no more events are queued.
     
-    //statusLabel.text = @"Removed Service";
-	
+    NSLog(@"Removing service...");
+    
 	if (self.currentResolve && [service isEqual:self.currentResolve]) {
 		[self stopCurrentResolve];
 	}
@@ -190,6 +189,7 @@
     
 	// note the following method returns _inStream and _outStream with a retain count that the caller must eventually release
 	if (![service getInputStream:&_inStream outputStream:&_outStream]) {
+        NSLog(@"Failed to connect to server.");
 		statusLabel.text = @"Failed connecting to server";
 		return;
 	}
@@ -199,14 +199,16 @@
     
 	[self openStreams];
 	
-	[service release];
+	//[service release];
 }
 
 - (void) send:(const uint8_t)message
 {
+    NSLog(@"Trying to send %d", message);
 	if (_outStream && [_outStream hasSpaceAvailable]) {
+        NSLog(@"Stream is open");
 		if([_outStream write:(const uint8_t *)&message maxLength:sizeof(const uint8_t)] == -1) {
-			//[self _showAlert:@"Failed sending data to peer"];
+			statusLabel.text = @"Failed sending data to peer";
         }
     }
 }
@@ -220,25 +222,15 @@
 	[_outStream scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
 	[_outStream open];
     
+    if (_outStream) {
+        NSLog(@"Outstream is open.");
+    }
+    
+    if (_inStream) {
+        NSLog(@"Instream is open.");
+    }
+    
     statusLabel.text = @"Ready!";
-}
-
-- (void) browserViewController:(BrowserViewController *)bvc didResolveInstance:(NSNetService *)netService
-{
-	if (!netService) {
-		[self setup];
-		return;
-	}
-    
-	// note the following method returns _inStream and _outStream with a retain count that the caller must eventually release
-	if (![netService getInputStream:&_inStream outputStream:&_outStream]) {
-		statusLabel.text = @"Failed connecting to server";
-		return;
-	}
-    
-    statusLabel.text = @"Connected to peer";
-    
-	[self openStreams];
 }
 
 
@@ -264,12 +256,6 @@
     valueLabel.text = [NSString stringWithFormat:@"%d", [valueLabel.text intValue] - 1];
     [self send:-1];
 }
-
-@end
-
-
-#pragma mark -
-@implementation SynchTestViewController (NSStreamDelegate)
 
 - (void) stream:(NSStream *)stream handleEvent:(NSStreamEvent)eventCode
 {
@@ -325,11 +311,6 @@
 		}
 	}
 }
-
-@end
-
-#pragma mark -
-@implementation SynchTestViewController (TCPServerDelegate)
 
 - (void) serverDidEnableBonjour:(TCPServer *)server withName:(NSString *)string
 {

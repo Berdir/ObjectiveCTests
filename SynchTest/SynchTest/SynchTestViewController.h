@@ -10,7 +10,7 @@
 #import "TCPServer.h"
 #import "BrowserViewController.h"
 
-@interface SynchTestViewController : UIViewController <TCPServerDelegate, NSStreamDelegate, BrowserViewControllerDelegate, NSNetServiceDelegate, NSNetServiceBrowserDelegate> {
+@interface SynchTestViewController : UIViewController <TCPServerDelegate, NSStreamDelegate,  NSNetServiceDelegate, NSNetServiceBrowserDelegate> {
     IBOutlet UILabel *valueLabel;
     IBOutlet UIButton *upButton;
     IBOutlet UIButton *downButton;
@@ -35,12 +35,8 @@
     NSString *_ownName;
     
     
-    @private 
-        BrowserViewController *_bvc;
-    
 }
 
-@property (nonatomic, retain, readwrite) BrowserViewController *bvc;
 @property (nonatomic, retain, readwrite) NSNetService *ownEntry;
 @property (nonatomic, assign, readwrite) BOOL showDisclosureIndicators;
 @property (nonatomic, retain, readwrite) NSMutableArray *services;

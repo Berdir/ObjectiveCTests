@@ -188,12 +188,7 @@
 	[self setup];
 }
 
-- (void) send:(const uint8_t)message
-{
-	if (_outStream && [_outStream hasSpaceAvailable])
-		if([_outStream write:(const uint8_t *)&message maxLength:sizeof(const uint8_t)] == -1)
-			[self _showAlert:@"Failed sending data to peer"];
-}
+		
 
 - (void) activateView:(TapView *)view
 {

@@ -1,0 +1,480 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B92D1B7513388B3F000B9C5E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92D1B7413388B3F000B9C5E /* UIKit.framework */; };
+		B92D1B7713388B3F000B9C5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92D1B7613388B3F000B9C5E /* Foundation.framework */; };
+		B92D1B7913388B3F000B9C5E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92D1B7813388B3F000B9C5E /* CoreGraphics.framework */; };
+		B92D1B7F13388B3F000B9C5E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B92D1B7D13388B3F000B9C5E /* InfoPlist.strings */; };
+		B92D1B8213388B3F000B9C5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B92D1B8113388B3F000B9C5E /* main.m */; };
+		B92D1B8513388B3F000B9C5E /* SynchTestAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B92D1B8413388B3F000B9C5E /* SynchTestAppDelegate.m */; };
+		B92D1B8813388B3F000B9C5E /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B92D1B8613388B3F000B9C5E /* MainWindow.xib */; };
+		B92D1B8B13388B3F000B9C5E /* SynchTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B92D1B8A13388B3F000B9C5E /* SynchTestViewController.m */; };
+		B92D1B8E13388B3F000B9C5E /* SynchTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B92D1B8C13388B3F000B9C5E /* SynchTestViewController.xib */; };
+		B92D1B9513388B3F000B9C5E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92D1B7413388B3F000B9C5E /* UIKit.framework */; };
+		B92D1B9613388B3F000B9C5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92D1B7613388B3F000B9C5E /* Foundation.framework */; };
+		B92D1B9713388B3F000B9C5E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92D1B7813388B3F000B9C5E /* CoreGraphics.framework */; };
+		B92D1B9F13388B3F000B9C5E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B92D1B9D13388B3F000B9C5E /* InfoPlist.strings */; };
+		B92D1BA213388B3F000B9C5E /* SynchTestTests.h in Resources */ = {isa = PBXBuildFile; fileRef = B92D1BA113388B3F000B9C5E /* SynchTestTests.h */; };
+		B92D1BA413388B3F000B9C5E /* SynchTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B92D1BA313388B3F000B9C5E /* SynchTestTests.m */; };
+		B92D1BB613388EDC000B9C5E /* TCPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = B92D1BB513388EDC000B9C5E /* TCPServer.m */; };
+		B92D1BBF13389525000B9C5E /* BrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B92D1BBE13389525000B9C5E /* BrowserViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B92D1B9813388B3F000B9C5E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B92D1B6713388B3E000B9C5E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B92D1B6F13388B3E000B9C5E;
+			remoteInfo = SynchTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B92D1B7013388B3F000B9C5E /* SynchTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SynchTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B92D1B7413388B3F000B9C5E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B92D1B7613388B3F000B9C5E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B92D1B7813388B3F000B9C5E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B92D1B7C13388B3F000B9C5E /* SynchTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SynchTest-Info.plist"; sourceTree = "<group>"; };
+		B92D1B7E13388B3F000B9C5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B92D1B8013388B3F000B9C5E /* SynchTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SynchTest-Prefix.pch"; sourceTree = "<group>"; };
+		B92D1B8113388B3F000B9C5E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B92D1B8313388B3F000B9C5E /* SynchTestAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SynchTestAppDelegate.h; sourceTree = "<group>"; };
+		B92D1B8413388B3F000B9C5E /* SynchTestAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SynchTestAppDelegate.m; sourceTree = "<group>"; };
+		B92D1B8713388B3F000B9C5E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		B92D1B8913388B3F000B9C5E /* SynchTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SynchTestViewController.h; sourceTree = "<group>"; };
+		B92D1B8A13388B3F000B9C5E /* SynchTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SynchTestViewController.m; sourceTree = "<group>"; };
+		B92D1B8D13388B3F000B9C5E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SynchTestViewController.xib; sourceTree = "<group>"; };
+		B92D1B9413388B3F000B9C5E /* SynchTestTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SynchTestTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B92D1B9C13388B3F000B9C5E /* SynchTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SynchTestTests-Info.plist"; sourceTree = "<group>"; };
+		B92D1B9E13388B3F000B9C5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B92D1BA013388B3F000B9C5E /* SynchTestTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SynchTestTests-Prefix.pch"; sourceTree = "<group>"; };
+		B92D1BA113388B3F000B9C5E /* SynchTestTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SynchTestTests.h; sourceTree = "<group>"; };
+		B92D1BA313388B3F000B9C5E /* SynchTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SynchTestTests.m; sourceTree = "<group>"; };
+		B92D1BB413388EDC000B9C5E /* TCPServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPServer.h; sourceTree = "<group>"; };
+		B92D1BB513388EDC000B9C5E /* TCPServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCPServer.m; sourceTree = "<group>"; };
+		B92D1BBD13389525000B9C5E /* BrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowserViewController.h; sourceTree = "<group>"; };
+		B92D1BBE13389525000B9C5E /* BrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowserViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B92D1B6D13388B3E000B9C5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B92D1B7513388B3F000B9C5E /* UIKit.framework in Frameworks */,
+				B92D1B7713388B3F000B9C5E /* Foundation.framework in Frameworks */,
+				B92D1B7913388B3F000B9C5E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B92D1B9013388B3F000B9C5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B92D1B9513388B3F000B9C5E /* UIKit.framework in Frameworks */,
+				B92D1B9613388B3F000B9C5E /* Foundation.framework in Frameworks */,
+				B92D1B9713388B3F000B9C5E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B92D1B6513388B3E000B9C5E = {
+			isa = PBXGroup;
+			children = (
+				B92D1B7A13388B3F000B9C5E /* SynchTest */,
+				B92D1B9A13388B3F000B9C5E /* SynchTestTests */,
+				B92D1B7313388B3F000B9C5E /* Frameworks */,
+				B92D1B7113388B3F000B9C5E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B92D1B7113388B3F000B9C5E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B92D1B7013388B3F000B9C5E /* SynchTest.app */,
+				B92D1B9413388B3F000B9C5E /* SynchTestTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B92D1B7313388B3F000B9C5E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B92D1B7413388B3F000B9C5E /* UIKit.framework */,
+				B92D1B7613388B3F000B9C5E /* Foundation.framework */,
+				B92D1B7813388B3F000B9C5E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B92D1B7A13388B3F000B9C5E /* SynchTest */ = {
+			isa = PBXGroup;
+			children = (
+				B92D1BAD13388EA2000B9C5E /* Networking */,
+				B92D1B8313388B3F000B9C5E /* SynchTestAppDelegate.h */,
+				B92D1B8413388B3F000B9C5E /* SynchTestAppDelegate.m */,
+				B92D1B8613388B3F000B9C5E /* MainWindow.xib */,
+				B92D1B8913388B3F000B9C5E /* SynchTestViewController.h */,
+				B92D1B8A13388B3F000B9C5E /* SynchTestViewController.m */,
+				B92D1B8C13388B3F000B9C5E /* SynchTestViewController.xib */,
+				B92D1B7B13388B3F000B9C5E /* Supporting Files */,
+			);
+			path = SynchTest;
+			sourceTree = "<group>";
+		};
+		B92D1B7B13388B3F000B9C5E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B92D1B7C13388B3F000B9C5E /* SynchTest-Info.plist */,
+				B92D1B7D13388B3F000B9C5E /* InfoPlist.strings */,
+				B92D1B8013388B3F000B9C5E /* SynchTest-Prefix.pch */,
+				B92D1B8113388B3F000B9C5E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B92D1B9A13388B3F000B9C5E /* SynchTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				B92D1BA113388B3F000B9C5E /* SynchTestTests.h */,
+				B92D1BA313388B3F000B9C5E /* SynchTestTests.m */,
+				B92D1B9B13388B3F000B9C5E /* Supporting Files */,
+			);
+			path = SynchTestTests;
+			sourceTree = "<group>";
+		};
+		B92D1B9B13388B3F000B9C5E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B92D1B9C13388B3F000B9C5E /* SynchTestTests-Info.plist */,
+				B92D1B9D13388B3F000B9C5E /* InfoPlist.strings */,
+				B92D1BA013388B3F000B9C5E /* SynchTestTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B92D1BAD13388EA2000B9C5E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B92D1BBD13389525000B9C5E /* BrowserViewController.h */,
+				B92D1BBE13389525000B9C5E /* BrowserViewController.m */,
+				B92D1BB413388EDC000B9C5E /* TCPServer.h */,
+				B92D1BB513388EDC000B9C5E /* TCPServer.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B92D1B6F13388B3E000B9C5E /* SynchTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B92D1BA713388B3F000B9C5E /* Build configuration list for PBXNativeTarget "SynchTest" */;
+			buildPhases = (
+				B92D1B6C13388B3E000B9C5E /* Sources */,
+				B92D1B6D13388B3E000B9C5E /* Frameworks */,
+				B92D1B6E13388B3E000B9C5E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SynchTest;
+			productName = SynchTest;
+			productReference = B92D1B7013388B3F000B9C5E /* SynchTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B92D1B9313388B3F000B9C5E /* SynchTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B92D1BAA13388B3F000B9C5E /* Build configuration list for PBXNativeTarget "SynchTestTests" */;
+			buildPhases = (
+				B92D1B8F13388B3F000B9C5E /* Sources */,
+				B92D1B9013388B3F000B9C5E /* Frameworks */,
+				B92D1B9113388B3F000B9C5E /* Resources */,
+				B92D1B9213388B3F000B9C5E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B92D1B9913388B3F000B9C5E /* PBXTargetDependency */,
+			);
+			name = SynchTestTests;
+			productName = SynchTestTests;
+			productReference = B92D1B9413388B3F000B9C5E /* SynchTestTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B92D1B6713388B3E000B9C5E /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = B92D1B6A13388B3E000B9C5E /* Build configuration list for PBXProject "SynchTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B92D1B6513388B3E000B9C5E;
+			productRefGroup = B92D1B7113388B3F000B9C5E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B92D1B6F13388B3E000B9C5E /* SynchTest */,
+				B92D1B9313388B3F000B9C5E /* SynchTestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B92D1B6E13388B3E000B9C5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B92D1B7F13388B3F000B9C5E /* InfoPlist.strings in Resources */,
+				B92D1B8813388B3F000B9C5E /* MainWindow.xib in Resources */,
+				B92D1B8E13388B3F000B9C5E /* SynchTestViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B92D1B9113388B3F000B9C5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B92D1B9F13388B3F000B9C5E /* InfoPlist.strings in Resources */,
+				B92D1BA213388B3F000B9C5E /* SynchTestTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B92D1B9213388B3F000B9C5E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B92D1B6C13388B3E000B9C5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B92D1B8213388B3F000B9C5E /* main.m in Sources */,
+				B92D1B8513388B3F000B9C5E /* SynchTestAppDelegate.m in Sources */,
+				B92D1B8B13388B3F000B9C5E /* SynchTestViewController.m in Sources */,
+				B92D1BB613388EDC000B9C5E /* TCPServer.m in Sources */,
+				B92D1BBF13389525000B9C5E /* BrowserViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B92D1B8F13388B3F000B9C5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B92D1BA413388B3F000B9C5E /* SynchTestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B92D1B9913388B3F000B9C5E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B92D1B6F13388B3E000B9C5E /* SynchTest */;
+			targetProxy = B92D1B9813388B3F000B9C5E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B92D1B7D13388B3F000B9C5E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B92D1B7E13388B3F000B9C5E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B92D1B8613388B3F000B9C5E /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B92D1B8713388B3F000B9C5E /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		B92D1B8C13388B3F000B9C5E /* SynchTestViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B92D1B8D13388B3F000B9C5E /* en */,
+			);
+			name = SynchTestViewController.xib;
+			sourceTree = "<group>";
+		};
+		B92D1B9D13388B3F000B9C5E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B92D1B9E13388B3F000B9C5E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B92D1BA513388B3F000B9C5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B92D1BA613388B3F000B9C5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		B92D1BA813388B3F000B9C5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SynchTest/SynchTest-Prefix.pch";
+				INFOPLIST_FILE = "SynchTest/SynchTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B92D1BA913388B3F000B9C5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SynchTest/SynchTest-Prefix.pch";
+				INFOPLIST_FILE = "SynchTest/SynchTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B92D1BAB13388B3F000B9C5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SynchTest.app/SynchTest";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SynchTestTests/SynchTestTests-Prefix.pch";
+				INFOPLIST_FILE = "SynchTestTests/SynchTestTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		B92D1BAC13388B3F000B9C5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SynchTest.app/SynchTest";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SynchTestTests/SynchTestTests-Prefix.pch";
+				INFOPLIST_FILE = "SynchTestTests/SynchTestTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B92D1B6A13388B3E000B9C5E /* Build configuration list for PBXProject "SynchTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B92D1BA513388B3F000B9C5E /* Debug */,
+				B92D1BA613388B3F000B9C5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B92D1BA713388B3F000B9C5E /* Build configuration list for PBXNativeTarget "SynchTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B92D1BA813388B3F000B9C5E /* Debug */,
+				B92D1BA913388B3F000B9C5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B92D1BAA13388B3F000B9C5E /* Build configuration list for PBXNativeTarget "SynchTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B92D1BAB13388B3F000B9C5E /* Debug */,
+				B92D1BAC13388B3F000B9C5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B92D1B6713388B3E000B9C5E /* Project object */;
+}

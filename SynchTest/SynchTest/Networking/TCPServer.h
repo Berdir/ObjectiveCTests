@@ -1,7 +1,6 @@
 /*
-     File: Picker.h
- Abstract: A view that displays both the currently advertised game name and a list of other games
- available on the local network - discovered & displayed by BrowserViewController.
+     File: TCPServer.h
+ Abstract: A TCP server that listens on an arbitrary port.
   Version: 1.8
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
@@ -43,22 +42,46 @@
  POSSIBILITY OF SUCH DAMAGE.
  
  Copyright (C) 2010 Apple Inc. All Rights Reserved.
- 	
+ 
  */
 
-#import <UIKit/UIKit.h>
-#import "BrowserViewController.h"
+#import <Foundation/Foundation.h>
 
-@interface Picker : UIView {
+@class TCPServer;
 
+NSString * const TCPServerErrorDomain;
+
+typedef enum {
+    kTCPServerCouldNotBindToIPv4Address = 1,
+    kTCPServerCouldNotBindToIPv6Address = 2,
+    kTCPServerNoSocketsAvailable = 3,
+} TCPServerErrorCode;
+
+
+@protocol TCPServerDelegate <NSObject>
+@optional
+- (void) serverDidEnableBonjour:(TCPServer*)server withName:(NSString*)name;
+- (void) server:(TCPServer*)server didNotEnableBonjour:(NSDictionary *)errorDict;
+- (void) didAcceptConnectionForServer:(TCPServer*)server inputStream:(NSInputStream *)istr outputStream:(NSOutputStream *)ostr;
+@end
+
+
+@interface TCPServer : NSObject <NSNetServiceDelegate> {
 @private
-	UILabel *_gameNameLabel;
-	BrowserViewController *_bvc;
+	id _delegate;
+    uint16_t _port;
+	uint32_t protocolFamily;
+	CFSocketRef witap_socket;
+	NSNetService* _netService;
 }
+	
+- (BOOL)start:(NSError **)error;
+- (BOOL)stop;
+- (BOOL) enableBonjourWithDomain:(NSString*)domain applicationProtocol:(NSString*)protocol name:(NSString*)name; //Pass "nil" for the default local domain - Pass only the application protocol for "protocol" e.g. "myApp"
+- (void) disableBonjour;
 
-@property (nonatomic, assign) id<BrowserViewControllerDelegate> delegate;
-@property (nonatomic, copy) NSString *gameName;
+@property(assign) id<TCPServerDelegate> delegate;
 
-- (id)initWithFrame:(CGRect)frame type:(NSString *)type;
++ (NSString*) bonjourTypeFromIdentifier:(NSString*)identifier;
 
 @end

@@ -2,12 +2,13 @@
 //  Sequence.m
 //  ERD
 //
-//  Created by ceesar on 22/03/11.
+//  Created by ceesar on 23/03/11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
 #import "Sequence.h"
 #import "Action.h"
+#import "LocalPicture.h"
 #import "Presentation.h"
 
 
@@ -16,6 +17,7 @@
 @dynamic command;
 @dynamic presentations;
 @dynamic actions;
+@dynamic icon;
 
 - (void)addPresentationsObject:(Presentation *)value {    
     NSSet *changedObjects = [[NSSet alloc] initWithObjects:&value count:1];
@@ -73,6 +75,7 @@
     [[self primitiveValueForKey:@"actions"] minusSet:value];
     [self didChangeValueForKey:@"actions" withSetMutation:NSKeyValueMinusSetMutation usingObjects:value];
 }
+
 
 
 @end

@@ -24,12 +24,12 @@
 		B92D1C581338EDF4000B9C5E /* ERDTests.h in Resources */ = {isa = PBXBuildFile; fileRef = B92D1C571338EDF4000B9C5E /* ERDTests.h */; };
 		B92D1C5A1338EDF4000B9C5E /* ERDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B92D1C591338EDF4000B9C5E /* ERDTests.m */; };
 		B92D1C6513390F77000B9C5E /* Action.m in Sources */ = {isa = PBXBuildFile; fileRef = B92D1C6413390F77000B9C5E /* Action.m */; };
-		B92D1C6813390F77000B9C5E /* Param.m in Sources */ = {isa = PBXBuildFile; fileRef = B92D1C6713390F77000B9C5E /* Param.m */; };
 		B92D1C6B13390F77000B9C5E /* Presentation.m in Sources */ = {isa = PBXBuildFile; fileRef = B92D1C6A13390F77000B9C5E /* Presentation.m */; };
-		B92D1C6E13390F77000B9C5E /* Sequence.m in Sources */ = {isa = PBXBuildFile; fileRef = B92D1C6D13390F77000B9C5E /* Sequence.m */; };
-		B92D1C7113390F77000B9C5E /* LocalPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = B92D1C7013390F77000B9C5E /* LocalPicture.m */; };
 		B92D1C7513393D33000B9C5E /* ERDExample.m in Sources */ = {isa = PBXBuildFile; fileRef = B92D1C7313393D33000B9C5E /* ERDExample.m */; };
 		B92D1C7613393D33000B9C5E /* ERDExample.xib in Resources */ = {isa = PBXBuildFile; fileRef = B92D1C7413393D33000B9C5E /* ERDExample.xib */; };
+		B92D1C791339DCAA000B9C5E /* Param.m in Sources */ = {isa = PBXBuildFile; fileRef = B92D1C781339DCAA000B9C5E /* Param.m */; };
+		B92D1C7C1339DCAB000B9C5E /* LocalPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = B92D1C7B1339DCAB000B9C5E /* LocalPicture.m */; };
+		B92D1C7F1339DCAC000B9C5E /* Sequence.m in Sources */ = {isa = PBXBuildFile; fileRef = B92D1C7E1339DCAC000B9C5E /* Sequence.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,17 +64,17 @@
 		B92D1C591338EDF4000B9C5E /* ERDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ERDTests.m; sourceTree = "<group>"; };
 		B92D1C6313390F77000B9C5E /* Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Action.h; path = coredata/Action.h; sourceTree = "<group>"; };
 		B92D1C6413390F77000B9C5E /* Action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Action.m; path = coredata/Action.m; sourceTree = "<group>"; };
-		B92D1C6613390F77000B9C5E /* Param.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Param.h; path = coredata/Param.h; sourceTree = "<group>"; };
-		B92D1C6713390F77000B9C5E /* Param.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Param.m; path = coredata/Param.m; sourceTree = "<group>"; };
 		B92D1C6913390F77000B9C5E /* Presentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Presentation.h; path = coredata/Presentation.h; sourceTree = "<group>"; };
 		B92D1C6A13390F77000B9C5E /* Presentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Presentation.m; path = coredata/Presentation.m; sourceTree = "<group>"; };
-		B92D1C6C13390F77000B9C5E /* Sequence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Sequence.h; path = coredata/Sequence.h; sourceTree = "<group>"; };
-		B92D1C6D13390F77000B9C5E /* Sequence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Sequence.m; path = coredata/Sequence.m; sourceTree = "<group>"; };
-		B92D1C6F13390F77000B9C5E /* LocalPicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocalPicture.h; path = coredata/LocalPicture.h; sourceTree = "<group>"; };
-		B92D1C7013390F77000B9C5E /* LocalPicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocalPicture.m; path = coredata/LocalPicture.m; sourceTree = "<group>"; };
 		B92D1C7213393D32000B9C5E /* ERDExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ERDExample.h; sourceTree = "<group>"; };
 		B92D1C7313393D33000B9C5E /* ERDExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ERDExample.m; sourceTree = "<group>"; };
 		B92D1C7413393D33000B9C5E /* ERDExample.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ERDExample.xib; sourceTree = "<group>"; };
+		B92D1C771339DCA9000B9C5E /* Param.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Param.h; path = coredata/Param.h; sourceTree = "<group>"; };
+		B92D1C781339DCAA000B9C5E /* Param.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Param.m; path = coredata/Param.m; sourceTree = "<group>"; };
+		B92D1C7A1339DCAB000B9C5E /* LocalPicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocalPicture.h; path = coredata/LocalPicture.h; sourceTree = "<group>"; };
+		B92D1C7B1339DCAB000B9C5E /* LocalPicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocalPicture.m; path = coredata/LocalPicture.m; sourceTree = "<group>"; };
+		B92D1C7D1339DCAB000B9C5E /* Sequence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Sequence.h; path = coredata/Sequence.h; sourceTree = "<group>"; };
+		B92D1C7E1339DCAC000B9C5E /* Sequence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Sequence.m; path = coredata/Sequence.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,19 +141,19 @@
 				B92D1C3B1338EDF4000B9C5E /* MainWindow.xib */,
 				B92D1C381338EDF4000B9C5E /* ERD.xcdatamodeld */,
 				B92D1C2D1338EDF4000B9C5E /* Supporting Files */,
-				B92D1C6F13390F77000B9C5E /* LocalPicture.h */,
-				B92D1C7013390F77000B9C5E /* LocalPicture.m */,
-				B92D1C6C13390F77000B9C5E /* Sequence.h */,
-				B92D1C6D13390F77000B9C5E /* Sequence.m */,
 				B92D1C6913390F77000B9C5E /* Presentation.h */,
 				B92D1C6A13390F77000B9C5E /* Presentation.m */,
-				B92D1C6613390F77000B9C5E /* Param.h */,
-				B92D1C6713390F77000B9C5E /* Param.m */,
 				B92D1C6313390F77000B9C5E /* Action.h */,
 				B92D1C6413390F77000B9C5E /* Action.m */,
 				B92D1C7213393D32000B9C5E /* ERDExample.h */,
 				B92D1C7313393D33000B9C5E /* ERDExample.m */,
 				B92D1C7413393D33000B9C5E /* ERDExample.xib */,
+				B92D1C771339DCA9000B9C5E /* Param.h */,
+				B92D1C781339DCAA000B9C5E /* Param.m */,
+				B92D1C7A1339DCAB000B9C5E /* LocalPicture.h */,
+				B92D1C7B1339DCAB000B9C5E /* LocalPicture.m */,
+				B92D1C7D1339DCAB000B9C5E /* Sequence.h */,
+				B92D1C7E1339DCAC000B9C5E /* Sequence.m */,
 			);
 			path = ERD;
 			sourceTree = "<group>";
@@ -298,11 +298,11 @@
 				B92D1C371338EDF4000B9C5E /* ERDAppDelegate.m in Sources */,
 				B92D1C3A1338EDF4000B9C5E /* ERD.xcdatamodeld in Sources */,
 				B92D1C6513390F77000B9C5E /* Action.m in Sources */,
-				B92D1C6813390F77000B9C5E /* Param.m in Sources */,
 				B92D1C6B13390F77000B9C5E /* Presentation.m in Sources */,
-				B92D1C6E13390F77000B9C5E /* Sequence.m in Sources */,
-				B92D1C7113390F77000B9C5E /* LocalPicture.m in Sources */,
 				B92D1C7513393D33000B9C5E /* ERDExample.m in Sources */,
+				B92D1C791339DCAA000B9C5E /* Param.m in Sources */,
+				B92D1C7C1339DCAB000B9C5E /* LocalPicture.m in Sources */,
+				B92D1C7F1339DCAC000B9C5E /* Sequence.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

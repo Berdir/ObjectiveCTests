@@ -91,6 +91,7 @@
 	
 	Detail *dvController = [[Detail alloc] initWithNibName:@"Detail" bundle:[NSBundle mainBundle]];
 	dvController.selectedPresentation = [NSString stringWithFormat:@"Führungsablauf %i", [indexPath row]];
+    dvController.step = 1;
 	[self.navigationController pushViewController:dvController animated:YES];
 	[dvController release];
 	dvController = nil;

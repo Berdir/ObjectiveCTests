@@ -12,12 +12,27 @@
 @interface Detail : UIViewController {
 	IBOutlet UILabel *label;
 	IBOutlet UIButton *button;
+    IBOutlet UIButton *imageButton;
+    IBOutlet UILabel *actionLabel;
+    
+	CGPoint gestureStartPoint;
 	
 	NSString *selectedPresentation;
+    
+    int step;
+    
+    BOOL comfortImage;
+    
+    @private
+        CGPoint imageInitialPoint;
 }
 
-- (void)click: (id) sender;
+- (IBAction) click: (id) sender;
+- (IBAction) clickImage: (id) sender;
+- (void) forward;
+- (void) backward;
 
 @property (nonatomic, retain) NSString *selectedPresentation;
+@property (nonatomic) int step;
 
 @end

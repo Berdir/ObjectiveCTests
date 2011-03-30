@@ -15,16 +15,14 @@
 
 -(void)startParsing;
 
-@end
-
-@interface XMLElement : NSObject {
-    
-}
-
-@property (readonly) NSString* tagName;
-
--(NSMutableArray*)getChildren:(NSString*)tagName;
+-(void)addAction:(NSDictionary*)attrib;
+-(void)addParam:(NSDictionary*)attrib;
 
 @end
+
+
+
+
+
 
 

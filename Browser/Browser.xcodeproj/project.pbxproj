@@ -20,12 +20,16 @@
 		B98599D0133D14090082E01F /* WebbrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B98599CE133D14090082E01F /* WebbrowserViewController.m */; };
 		B98599D1133D14090082E01F /* WebbrowserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B98599CF133D14090082E01F /* WebbrowserViewController.xib */; };
 		B9D49ACF1340E47C001AB2FB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D49ACE1340E47C001AB2FB /* CoreData.framework */; };
-		B9D49AD91340F320001AB2FB /* database.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B9D49AD01340F320001AB2FB /* database.sqlite */; };
 		B9D49ADA1340F320001AB2FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B9D49AD21340F320001AB2FB /* InfoPlist.strings */; };
 		B9D49ADB1340F320001AB2FB /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9D49AD41340F320001AB2FB /* MainWindow.xib */; };
 		B9D49ADC1340F320001AB2FB /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9D49AD61340F320001AB2FB /* RootViewController.xib */; };
 		B9D49ADD1340F320001AB2FB /* xml-example.xml in Resources */ = {isa = PBXBuildFile; fileRef = B9D49AD81340F320001AB2FB /* xml-example.xml */; };
-		B9D49ADF1340F354001AB2FB /* database.momd in Resources */ = {isa = PBXBuildFile; fileRef = B9D49ADE1340F354001AB2FB /* database.momd */; };
+		B9D65D33134206E50017AA76 /* Action.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D65D2A134206E50017AA76 /* Action.m */; };
+		B9D65D34134206E50017AA76 /* LocalPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D65D2C134206E50017AA76 /* LocalPicture.m */; };
+		B9D65D35134206E50017AA76 /* Param.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D65D2E134206E50017AA76 /* Param.m */; };
+		B9D65D36134206E50017AA76 /* Presentation.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D65D30134206E50017AA76 /* Presentation.m */; };
+		B9D65D37134206E50017AA76 /* Sequence.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D65D32134206E50017AA76 /* Sequence.m */; };
+		B9D65D43134209830017AA76 /* ERD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9D65D41134209830017AA76 /* ERD.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -61,12 +65,21 @@
 		B98599CE133D14090082E01F /* WebbrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebbrowserViewController.m; sourceTree = "<group>"; };
 		B98599CF133D14090082E01F /* WebbrowserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebbrowserViewController.xib; sourceTree = "<group>"; };
 		B9D49ACE1340E47C001AB2FB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		B9D49AD01340F320001AB2FB /* database.sqlite */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = database.sqlite; path = Browser/database.sqlite; sourceTree = "<group>"; };
 		B9D49AD31340F320001AB2FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 		B9D49AD51340F320001AB2FB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = MainWindow.xib; sourceTree = "<group>"; };
 		B9D49AD71340F320001AB2FB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = RootViewController.xib; sourceTree = "<group>"; };
 		B9D49AD81340F320001AB2FB /* xml-example.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "xml-example.xml"; path = "Browser/xml-example.xml"; sourceTree = "<group>"; };
-		B9D49ADE1340F354001AB2FB /* database.momd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = database.momd; path = Browser/database.momd; sourceTree = "<group>"; };
+		B9D65D29134206E50017AA76 /* Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Action.h; sourceTree = "<group>"; };
+		B9D65D2A134206E50017AA76 /* Action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Action.m; sourceTree = "<group>"; };
+		B9D65D2B134206E50017AA76 /* LocalPicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalPicture.h; sourceTree = "<group>"; };
+		B9D65D2C134206E50017AA76 /* LocalPicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalPicture.m; sourceTree = "<group>"; };
+		B9D65D2D134206E50017AA76 /* Param.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Param.h; sourceTree = "<group>"; };
+		B9D65D2E134206E50017AA76 /* Param.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Param.m; sourceTree = "<group>"; };
+		B9D65D2F134206E50017AA76 /* Presentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Presentation.h; sourceTree = "<group>"; };
+		B9D65D30134206E50017AA76 /* Presentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Presentation.m; sourceTree = "<group>"; };
+		B9D65D31134206E50017AA76 /* Sequence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sequence.h; sourceTree = "<group>"; };
+		B9D65D32134206E50017AA76 /* Sequence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sequence.m; sourceTree = "<group>"; };
+		B9D65D42134209830017AA76 /* ERD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ERD.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +100,8 @@
 		B9859995133D12670082E01F = {
 			isa = PBXGroup;
 			children = (
-				B9D49ADE1340F354001AB2FB /* database.momd */,
-				B9D49AD01340F320001AB2FB /* database.sqlite */,
+				B9D65D41134209830017AA76 /* ERD.xcdatamodeld */,
+				B9D65D28134206E50017AA76 /* coredata */,
 				B9D49AD11340F320001AB2FB /* en.lproj */,
 				B9D49AD81340F320001AB2FB /* xml-example.xml */,
 				B98599AA133D12670082E01F /* Browser */,
@@ -157,6 +170,24 @@
 			path = Browser/en.lproj;
 			sourceTree = "<group>";
 		};
+		B9D65D28134206E50017AA76 /* coredata */ = {
+			isa = PBXGroup;
+			children = (
+				B9D65D29134206E50017AA76 /* Action.h */,
+				B9D65D2A134206E50017AA76 /* Action.m */,
+				B9D65D2B134206E50017AA76 /* LocalPicture.h */,
+				B9D65D2C134206E50017AA76 /* LocalPicture.m */,
+				B9D65D2D134206E50017AA76 /* Param.h */,
+				B9D65D2E134206E50017AA76 /* Param.m */,
+				B9D65D2F134206E50017AA76 /* Presentation.h */,
+				B9D65D30134206E50017AA76 /* Presentation.m */,
+				B9D65D31134206E50017AA76 /* Sequence.h */,
+				B9D65D32134206E50017AA76 /* Sequence.m */,
+			);
+			name = coredata;
+			path = Browser/coredata;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -209,12 +240,10 @@
 				B98599B8133D12670082E01F /* MainWindow.xib in Resources */,
 				B98599BE133D12670082E01F /* RootViewController.xib in Resources */,
 				B98599D1133D14090082E01F /* WebbrowserViewController.xib in Resources */,
-				B9D49AD91340F320001AB2FB /* database.sqlite in Resources */,
 				B9D49ADA1340F320001AB2FB /* InfoPlist.strings in Resources */,
 				B9D49ADB1340F320001AB2FB /* MainWindow.xib in Resources */,
 				B9D49ADC1340F320001AB2FB /* RootViewController.xib in Resources */,
 				B9D49ADD1340F320001AB2FB /* xml-example.xml in Resources */,
-				B9D49ADF1340F354001AB2FB /* database.momd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +259,12 @@
 				B98599BB133D12670082E01F /* RootViewController.m in Sources */,
 				B98599D0133D14090082E01F /* WebbrowserViewController.m in Sources */,
 				B967BEBA134093FF009030E5 /* XMLParser.m in Sources */,
+				B9D65D33134206E50017AA76 /* Action.m in Sources */,
+				B9D65D34134206E50017AA76 /* LocalPicture.m in Sources */,
+				B9D65D35134206E50017AA76 /* Param.m in Sources */,
+				B9D65D36134206E50017AA76 /* Presentation.m in Sources */,
+				B9D65D37134206E50017AA76 /* Sequence.m in Sources */,
+				B9D65D43134209830017AA76 /* ERD.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +408,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B9D65D41134209830017AA76 /* ERD.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B9D65D42134209830017AA76 /* ERD.xcdatamodel */,
+			);
+			currentVersion = B9D65D42134209830017AA76 /* ERD.xcdatamodel */;
+			path = ERD.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B9859997133D12670082E01F /* Project object */;
 }

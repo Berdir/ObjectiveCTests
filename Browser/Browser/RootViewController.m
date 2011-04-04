@@ -8,7 +8,7 @@
 
 #import "RootViewController.h"
 #import "WebbrowserViewController.h"
-#import "XMLParser.h"
+#import "Importer.h"
 
 @implementation RootViewController
 
@@ -38,12 +38,12 @@
     NSString *line = [NSString stringWithFormat:@"%@\n%@", self.labellog.text, @"Hallo"];
     self.labellog.text = line;
    
-    XMLParser* parser = [[XMLParser alloc]init];
+    Importer* parser = [[Importer alloc]init];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(fireTextLog:) 
                                                  name:@"xmlTagGefunden"
                                                object:nil];
-    [parser startParsing];
+    [parser parseXMLFile:nil];
     [parser release];
     parser = nil;
 }
@@ -51,6 +51,8 @@
 
 - (void)dealloc
 {
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+    [_labellog release];
     [super dealloc];
 }
 

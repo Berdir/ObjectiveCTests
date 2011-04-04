@@ -79,6 +79,10 @@
 
 - (void)dealloc
 {
+    [__managedObjectContext release];
+    [__managedObjectModel release];    
+    [__persistentStoreCoordinator release];
+    [_viewController release];
     [_window release];
 //    [_viewController release];
     [_navCtrl release];

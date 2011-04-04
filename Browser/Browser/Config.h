@@ -9,14 +9,18 @@
 #import <Foundation/Foundation.h>
 
 
-@interface XMLParser : NSObject {
+@interface Config : NSObject {
     
 }
 
--(void)startParsing;
-
 -(void)addAction:(NSDictionary*)attrib;
 -(void)addParam:(NSDictionary*)attrib;
+-(void)addSequence:(NSDictionary*)attrib;
+-(void)addActionRef:(NSDictionary*)attrib;
+-(void)addPresentation:(NSDictionary*)attrib;
+-(void)addSequenceRef:(NSDictionary*)attrib;
+-(void)addServer:(NSDictionary*)attrib;
+-(void)saveToDB;
 
 @end
 

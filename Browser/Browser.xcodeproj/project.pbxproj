@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B967BEBA134093FF009030E5 /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B967BEB9134093FF009030E5 /* XMLParser.m */; };
+		B967BEBA134093FF009030E5 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = B967BEB9134093FF009030E5 /* Config.m */; };
 		B98599A5133D12670082E01F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B98599A4133D12670082E01F /* UIKit.framework */; };
 		B98599A7133D12670082E01F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B98599A6133D12670082E01F /* Foundation.framework */; };
 		B98599A9133D12670082E01F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B98599A8133D12670082E01F /* CoreGraphics.framework */; };
@@ -19,6 +19,8 @@
 		B98599BE133D12670082E01F /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B98599BC133D12670082E01F /* RootViewController.xib */; };
 		B98599D0133D14090082E01F /* WebbrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B98599CE133D14090082E01F /* WebbrowserViewController.m */; };
 		B98599D1133D14090082E01F /* WebbrowserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B98599CF133D14090082E01F /* WebbrowserViewController.xib */; };
+		B988004E134657D1003E2224 /* testpic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B988004D134657D1003E2224 /* testpic.jpg */; };
+		B98DB0F81344802000DAE0C4 /* Importer.m in Sources */ = {isa = PBXBuildFile; fileRef = B98DB0F71344802000DAE0C4 /* Importer.m */; };
 		B9D49ACF1340E47C001AB2FB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D49ACE1340E47C001AB2FB /* CoreData.framework */; };
 		B9D49ADA1340F320001AB2FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B9D49AD21340F320001AB2FB /* InfoPlist.strings */; };
 		B9D49ADB1340F320001AB2FB /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9D49AD41340F320001AB2FB /* MainWindow.xib */; };
@@ -45,8 +47,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B967BEB8134093FE009030E5 /* XMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLParser.h; sourceTree = "<group>"; };
-		B967BEB9134093FF009030E5 /* XMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLParser.m; sourceTree = "<group>"; };
+		B967BEB8134093FE009030E5 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		B967BEB9134093FF009030E5 /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
 		B98599A0133D12670082E01F /* Browser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Browser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B98599A4133D12670082E01F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B98599A6133D12670082E01F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -64,6 +66,9 @@
 		B98599CD133D14090082E01F /* WebbrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebbrowserViewController.h; sourceTree = "<group>"; };
 		B98599CE133D14090082E01F /* WebbrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebbrowserViewController.m; sourceTree = "<group>"; };
 		B98599CF133D14090082E01F /* WebbrowserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebbrowserViewController.xib; sourceTree = "<group>"; };
+		B988004D134657D1003E2224 /* testpic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testpic.jpg; sourceTree = "<group>"; };
+		B98DB0F61344802000DAE0C4 /* Importer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Importer.h; path = ../Importer.h; sourceTree = "<group>"; };
+		B98DB0F71344802000DAE0C4 /* Importer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Importer.m; path = ../Importer.m; sourceTree = "<group>"; };
 		B9D49ACE1340E47C001AB2FB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		B9D49AD31340F320001AB2FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 		B9D49AD51340F320001AB2FB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = MainWindow.xib; sourceTree = "<group>"; };
@@ -101,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				B9D65D41134209830017AA76 /* ERD.xcdatamodeld */,
+				B988004D134657D1003E2224 /* testpic.jpg */,
 				B9D65D28134206E50017AA76 /* coredata */,
 				B9D49AD11340F320001AB2FB /* en.lproj */,
 				B9D49AD81340F320001AB2FB /* xml-example.xml */,
@@ -132,6 +138,7 @@
 		B98599AA133D12670082E01F /* Browser */ = {
 			isa = PBXGroup;
 			children = (
+				B98DB0F91344807600DAE0C4 /* xml_Import */,
 				B98599CD133D14090082E01F /* WebbrowserViewController.h */,
 				B98599CE133D14090082E01F /* WebbrowserViewController.m */,
 				B98599CF133D14090082E01F /* WebbrowserViewController.xib */,
@@ -142,8 +149,6 @@
 				B98599BA133D12670082E01F /* RootViewController.m */,
 				B98599BC133D12670082E01F /* RootViewController.xib */,
 				B98599AB133D12670082E01F /* Supporting Files */,
-				B967BEB8134093FE009030E5 /* XMLParser.h */,
-				B967BEB9134093FF009030E5 /* XMLParser.m */,
 			);
 			path = Browser;
 			sourceTree = "<group>";
@@ -157,6 +162,17 @@
 				B98599B1133D12670082E01F /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B98DB0F91344807600DAE0C4 /* xml_Import */ = {
+			isa = PBXGroup;
+			children = (
+				B967BEB8134093FE009030E5 /* Config.h */,
+				B967BEB9134093FF009030E5 /* Config.m */,
+				B98DB0F61344802000DAE0C4 /* Importer.h */,
+				B98DB0F71344802000DAE0C4 /* Importer.m */,
+			);
+			name = xml_Import;
 			sourceTree = "<group>";
 		};
 		B9D49AD11340F320001AB2FB /* en.lproj */ = {
@@ -244,6 +260,7 @@
 				B9D49ADB1340F320001AB2FB /* MainWindow.xib in Resources */,
 				B9D49ADC1340F320001AB2FB /* RootViewController.xib in Resources */,
 				B9D49ADD1340F320001AB2FB /* xml-example.xml in Resources */,
+				B988004E134657D1003E2224 /* testpic.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,13 +275,14 @@
 				B98599B5133D12670082E01F /* BrowserAppDelegate.m in Sources */,
 				B98599BB133D12670082E01F /* RootViewController.m in Sources */,
 				B98599D0133D14090082E01F /* WebbrowserViewController.m in Sources */,
-				B967BEBA134093FF009030E5 /* XMLParser.m in Sources */,
+				B967BEBA134093FF009030E5 /* Config.m in Sources */,
 				B9D65D33134206E50017AA76 /* Action.m in Sources */,
 				B9D65D34134206E50017AA76 /* LocalPicture.m in Sources */,
 				B9D65D35134206E50017AA76 /* Param.m in Sources */,
 				B9D65D36134206E50017AA76 /* Presentation.m in Sources */,
 				B9D65D37134206E50017AA76 /* Sequence.m in Sources */,
 				B9D65D43134209830017AA76 /* ERD.xcdatamodeld in Sources */,
+				B98DB0F81344802000DAE0C4 /* Importer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,6 +25,7 @@
 
 - (void)dealloc
 {
+    [_myWebView release];
     [super dealloc];
 }
 
@@ -45,7 +46,7 @@
 
     NSLog(@"webbrowser started");
     
-    NSString *urlAddress = @"http://www.google.com";
+    NSString *urlAddress = @"http://www.die-seite.ch";
     //NSString *urlAddress = @"http://10.9.9.242/axis-cgi/mjpg/video.cgi?resolution=600x802";
     
     //Create a URL object.

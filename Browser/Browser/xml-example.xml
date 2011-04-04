@@ -1,22 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<config>
-	<presentations>
-		<presentation id="0" name="iHomeLab Standardfuehrung" comment="Diese Fuehrung richtet sich an die Allgemeinheit">
-			<sequenceRef ref="1"/>
-		</presentation>
-	</presentations>
-	<sequences>
-		<sequence id="1" name="Sequenz Intro" icon="http://irgendwo/irgendEinBild.jpg" command="LAB_START_INTRO">
-			<actionRef ref="2"/>
-			<actionRef ref="3"/>
-			<actionRef ref="4"/>
-			<actionRef ref="5"/>
-		</sequence>
-	</sequences>
+<config xmlns="http://tobedefined.ch/schema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://tobedefined.ch/schema.xsd">
 	<actions>
 		<action id="2" name="Film abspielen" type="command" favorite="2">
 			<param key="cmd" value="IHL_LAB_MOVIE_PLAY"/>
-			<param key="localPicture" value="http://irgendwo/irgendEinIcon1.jpg"/>  
+			<param key="localPicture" value="http://www.die-seite.ch/movie.gif"/>  
 		</action>
 		<action id="3" name="Webcam anschauen" type="media" favorite="1">
 			<param key="url" value="http://10.9.9.242/axis-cgi/mjpg/video.cgi?resolution=600x802"/>
@@ -27,9 +14,22 @@
 		</action>
 		<action id="5" name="SMS empfangen" type="picture" favorite="0">
 			<!-- Diese Bild wird beim Importvorgang SOFORT importiert und lokal gespeichert -->
-			<param key="localPicture" value="http://irgendwo/irgendEinBild.jpg"/>
+			<param key="localPicture" value="testpic.jpg"/>
 		</action>
 	</actions>
+	<sequences>
+		<sequence id="1" name="Sequenz Intro" icon="http://www.die-seite.ch/movie.gif" command="LAB_START_INTRO">
+			<actionRef ref="2"/>
+			<actionRef ref="3"/>
+			<actionRef ref="4"/>
+			<actionRef ref="5"/>
+		</sequence>
+	</sequences>
+	<presentations>
+		<presentation id="0" name="iHomeLab Standardfuehrung" comment="Diese Fuehrung richtet sich an die Allgemeinheit">
+			<sequenceRef ref="1"/>
+		</presentation>
+	</presentations>
 	<serverConfig>
 		<server type="simulator" ip="127.0.0.1" port="1234"/>
 		<server type="real" ip="127.0.0.2" port="1234"/>

@@ -35,19 +35,20 @@ Config* configTag; //HelperClass to put Child-Tag Attributes to CoreDBFramework
     
     
     for (Presentation *p in result) {
-        NSLog(@"Presentation %@ contains:", p.name);
-
+        NSLog(@"Presentation %@ is a %@ :", p.name, p.comment);
+        
         for (Sequence* s in p.sequences)
         {
-            NSLog(@"    a Sequence with name %@ contains Actions:", s.name);
+            NSLog(@"    Sequence %@ with icon of size %i and command %@ has:", s.name, [s.icon.picture length], s.command);
             for (Action* a in s.actions)
             {
                 NSLog(@"        Action %@ with:", a.name);
                 for (Param* pa in a.params)
                 {
-                     NSLog(@"           Param key = %@ ", pa.key);
-                     NSLog(@"           Param value = %@ ", pa.value);
-                     NSLog(@"           Param Picture size = %i", [pa.localImage.picture length]);
+                    NSLog(@"           Param:");
+                    NSLog(@"               key = %@ ", pa.key);
+                    NSLog(@"               value = %@ ", pa.value);
+                    NSLog(@"               Picture size = %i", [pa.localImage.picture length]);
                     
                 }
             }
@@ -84,21 +85,30 @@ Config* configTag; //HelperClass to put Child-Tag Attributes to CoreDBFramework
     [tableList release];
 }
 
-//the main entry of that class
--(void)parseXMLFile:(NSString*) fileName
+//the main entry of that class. 
+// Parameter examples: "http://foo.bar/any" or "localfile.txt"
+-(void)parseXMLFile:(NSString*) url
 {
 
     NSLog(@"parser started");
     context = [[[UIApplication sharedApplication] delegate] managedObjectContext];
-    //location of xml-file
+   
     NSURL* xmlURL;
-    if (fileName == nil) {
-        NSBundle *bundle = [NSBundle mainBundle];
-        fileName = [bundle pathForResource:@"xml-example" ofType:@"xml"];
-        xmlURL = [NSURL fileURLWithPath:fileName];
+    if (url == nil) {url = @"xml-example.xml";}
+
+     //location of xml-file
+    if ([url hasPrefix:@"http"]) //load from I-Net
+    {
+        xmlURL = [NSURL URLWithString:url]; 
+   
+    } else  //then load from local file
+    {
+        NSBundle* bundle = [NSBundle mainBundle];
+        NSString* rootdir = [bundle resourcePath];
+        NSString* fileName = [NSString stringWithFormat:@"%@/%@",rootdir,url];
+        xmlURL = [NSURL fileURLWithPath:fileName];        
     }
 
-    //TODO urlString from param to xmlURL-var
     
     
     [self clearDB];

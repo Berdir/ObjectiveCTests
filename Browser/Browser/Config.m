@@ -101,14 +101,16 @@ NSManagedObjectContext* context;
     Param* p = [NSEntityDescription insertNewObjectForEntityForName:@"Param" inManagedObjectContext:context];    
     
     p.key = [attrib objectForKey:@"key"];
+    NSString* picture = [attrib objectForKey:@"picture"];
     p.value = [attrib objectForKey:@"value"];
+    
 
     [a addParamsObject:p]; //calling of a generated code.. (fill the 1:n-collection)
     
     //Put a pic into db if needed
-    if ([p.key hasPrefix:@"localPicture"]) {
+    if (picture !=nil) {
         
-        LocalPicture*  lp = [self loadPicture:p.value]; 
+        LocalPicture*  lp = [self loadPicture:picture]; 
         p.localImage = lp;
 
     }
@@ -130,7 +132,7 @@ NSManagedObjectContext* context;
     NSString* icon = [attrib objectForKey:@"icon"];
     
     //put a picture into db if needed
-    if (![icon isEqual:@""])
+    if (icon !=nil)
     {
         LocalPicture*  lp  = [self loadPicture:icon];
         s.icon = lp;

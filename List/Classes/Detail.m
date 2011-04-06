@@ -7,6 +7,9 @@
 //
 
 #import "Detail.h"
+#import <AudioToolbox/AudioServices.h>
+#import "Favorites.h"
+
 
 
 @implementation Detail
@@ -79,14 +82,20 @@
             direction = @"down";
             break;
         case UISwipeGestureRecognizerDirectionUp:
+        {
+            Favorites *fav = [[Favorites alloc] initWithNibName:@"Favorites" bundle:[NSBundle mainBundle]];
+            [self.navigationController pushViewController:fav animated:YES];
+            [fav release];
+            fav = nil;
             direction = @"up";
+        }
             break;
         case UISwipeGestureRecognizerDirectionRight:
             [self backward];		
             direction = @"right";
             break;
         case UISwipeGestureRecognizerDirectionLeft:
-            [self forward];
+            [self forward:TRUE];
             direction = @"left";
             break;
             
@@ -129,10 +138,11 @@
 }
 
 - (void)clickImage:(id)sender {
-    [self forward];
+    [self forward:false];
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate); 
 }
 
-- (void) forward {
+- (void) forward:(BOOL) animated {
     NSString *controllerName = @"Detail";
     Detail *nextPage = [[NSClassFromString(controllerName) alloc] initWithNibName:controllerName bundle:[NSBundle mainBundle]];
     nextPage.selectedPresentation = self.selectedPresentation;
@@ -146,7 +156,7 @@
     
     // Pop the current controller and replace with another.
     [navController popViewControllerAnimated:NO];
-    [navController pushViewController:nextPage animated:YES];
+    [navController pushViewController:nextPage animated:animated];
 }
 
 - (void) backward {

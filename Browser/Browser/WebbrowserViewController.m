@@ -46,7 +46,9 @@
 
     NSLog(@"webbrowser started");
     
-    NSString *urlAddress = @"http://www.die-seite.ch";
+    //NSString *urlAddress = @"http://www.die-seite.ch";
+    NSString * urlAddress = @"http://192.168.1.42/cgi-bin/video.jpg?size=3";
+    //NSString * urlAddress = @"";
     //NSString *urlAddress = @"http://10.9.9.242/axis-cgi/mjpg/video.cgi?resolution=600x802";
     
     //Create a URL object.

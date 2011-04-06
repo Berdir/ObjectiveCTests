@@ -43,7 +43,7 @@
                                              selector:@selector(fireTextLog:) 
                                                  name:@"xmlTagGefunden"
                                                object:nil];
-    [parser parseXMLFile:nil];
+    [parser parseXMLFile:@"http://z.worldempire.ch/1/zigpad/config.xml"];
     [parser release];
     parser = nil;
 }

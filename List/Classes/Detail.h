@@ -29,7 +29,7 @@
 
 - (IBAction) click: (id) sender;
 - (IBAction) clickImage: (id) sender;
-- (void) forward;
+- (void) forward: (BOOL) animated;
 - (void) backward;
 
 @property (nonatomic, retain) NSString *selectedPresentation;

@@ -19,6 +19,9 @@
 		B92D1C89133A1BFF000B9C5E /* lounge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B92D1C87133A1BFF000B9C5E /* lounge.jpg */; };
 		B98597531330BC2E00AD6D8A /* Detail.m in Sources */ = {isa = PBXBuildFile; fileRef = B98597511330BC2E00AD6D8A /* Detail.m */; };
 		B98597541330BC2E00AD6D8A /* Detail.xib in Resources */ = {isa = PBXBuildFile; fileRef = B98597521330BC2E00AD6D8A /* Detail.xib */; };
+		B998B88A134C40F7003C2C7B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B998B889134C40F7003C2C7B /* AudioToolbox.framework */; };
+		B998B88E134C422E003C2C7B /* Favorites.m in Sources */ = {isa = PBXBuildFile; fileRef = B998B88C134C422E003C2C7B /* Favorites.m */; };
+		B998B88F134C422E003C2C7B /* Favorites.xib in Resources */ = {isa = PBXBuildFile; fileRef = B998B88D134C422E003C2C7B /* Favorites.xib */; };
 		B9C271DC1330FF3F00D32817 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B9C271DB1330FF3F00D32817 /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +44,10 @@
 		B98597501330BC2E00AD6D8A /* Detail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Detail.h; sourceTree = "<group>"; };
 		B98597511330BC2E00AD6D8A /* Detail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Detail.m; sourceTree = "<group>"; };
 		B98597521330BC2E00AD6D8A /* Detail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Detail.xib; path = Classes/Detail.xib; sourceTree = "<group>"; };
+		B998B889134C40F7003C2C7B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B998B88B134C422E003C2C7B /* Favorites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Favorites.h; sourceTree = "<group>"; };
+		B998B88C134C422E003C2C7B /* Favorites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Favorites.m; sourceTree = "<group>"; };
+		B998B88D134C422E003C2C7B /* Favorites.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Favorites.xib; sourceTree = "<group>"; };
 		B9C271DA1330FF3F00D32817 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = ../BProgressHUD/MBProgressHUD.h; sourceTree = "<group>"; };
 		B9C271DB1330FF3F00D32817 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = ../BProgressHUD/MBProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -50,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B998B88A134C40F7003C2C7B /* AudioToolbox.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
@@ -70,6 +78,9 @@
 				1D3623250D0F684500981E51 /* ListAppDelegate.m */,
 				B98597501330BC2E00AD6D8A /* Detail.h */,
 				B98597511330BC2E00AD6D8A /* Detail.m */,
+				B998B88B134C422E003C2C7B /* Favorites.h */,
+				B998B88C134C422E003C2C7B /* Favorites.m */,
+				B998B88D134C422E003C2C7B /* Favorites.xib */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -85,6 +96,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				B998B889134C40F7003C2C7B /* AudioToolbox.framework */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -181,6 +193,7 @@
 				B98597541330BC2E00AD6D8A /* Detail.xib in Resources */,
 				B92D1C88133A1BFF000B9C5E /* comfort.jpg in Resources */,
 				B92D1C89133A1BFF000B9C5E /* lounge.jpg in Resources */,
+				B998B88F134C422E003C2C7B /* Favorites.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +209,7 @@
 				28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */,
 				B98597531330BC2E00AD6D8A /* Detail.m in Sources */,
 				B9C271DC1330FF3F00D32817 /* MBProgressHUD.m in Sources */,
+				B998B88E134C422E003C2C7B /* Favorites.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,8 +9,7 @@
 #import "Detail.h"
 #import <AudioToolbox/AudioServices.h>
 #import "Favorites.h"
-
-
+#import <QuartzCore/QuartzCore.h>
 
 @implementation Detail
 
@@ -32,16 +31,71 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     
-    if (step % 2) {
-        [imageButton setImage:[UIImage imageNamed:@"lounge.jpg"] forState:UIControlStateNormal];
-    } else {
-        [imageButton setImage:[UIImage imageNamed:@"comfort.jpg"] forState:UIControlStateNormal];
+    NSString *imageName;
+    NSString *title;
+    NSString *sequence;
+
+    switch (step) {
+        case 1:
+            imageName = @"01_init.png";
+            title = @"iHomeLab initalisieren";
+            sequence = @"Einführung";
+            break;
+        case 2:
+            imageName = @"02_lamellen.png";
+            title = @"Lamellen bewegen";
+            sequence = @"Einführung";
+            break;
+        case 3:
+            imageName = @"03_lisa.png";
+            title = @"Begrüssung Lisa";
+            sequence = @"Einführung";
+            break;
+        case 4:
+            imageName = @"04_garage.png";
+            title = @"Garagetor öffnen";
+            sequence = @"Lounge";
+            break;
+        case 5:
+            imageName = @"05_lounge.png";
+            title = @"Loungetüre öffnen";
+            sequence = @"Lounge";
+            break;
+        case 6:
+            imageName = @"06_show.png";
+            title = @"Basispräsentation starten";
+            sequence = @"Lounge";
+            break;
+        case 7:
+            imageName = @"07_lab.png";
+            title = @"Labtüre öffnen";
+            sequence = @"Showcases";
+            break;
+        case 8:
+            imageName = @"08_komfort.png";
+            title = @"Showcase Komfort starten";
+            sequence = @"Showcases";
+            break;
+        case 9:
+            imageName = @"09_aal.png";
+            title = @"Showcase AAL starten";
+            sequence = @"Showcases";
+            break;
+        case 10:
+            imageName = @"10_energie.png";
+            title = @"Showcase Energieeffizienz starten";
+            sequence = @"Showcases";
+            break;
+            
+        default:
+            imageName = @"TODO";
+            title = @"TODO";
+            break;
     }
-    
-    imageInitialPoint = imageButton.frame.origin;
+    [imageButton setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
 	
-	label.text = selectedPresentation;
-    actionLabel.text = [NSString stringWithFormat:@"Action %d", self.step];
+	label.text = [sequence uppercaseString];
+    actionLabel.text = title;
     
 	//self.navigationItem.title = @"Selected Presentation";
     self.navigationController.toolbar.hidden = TRUE;
@@ -77,14 +131,28 @@
     NSString *direction;	
     switch (recogniser.direction) {
         case UISwipeGestureRecognizerDirectionDown:
+            
             self.navigationController.toolbar.hidden = FALSE;
+            self.navigationController.navigationBar.hidden = FALSE;
             [[self navigationController] popViewControllerAnimated:YES];
             direction = @"down";
             break;
         case UISwipeGestureRecognizerDirectionUp:
-        {
+        {	
             Favorites *fav = [[Favorites alloc] initWithNibName:@"Favorites" bundle:[NSBundle mainBundle]];
-            [self.navigationController pushViewController:fav animated:YES];
+            [UIView beginAnimations: @"moveField" context: nil];
+            
+            [UIView setAnimationDelegate: self];
+            
+            [UIView setAnimationDuration:	1.5];
+            
+            // For left to right transition animation
+            [UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:self.navigationController.view	 cache:NO];	
+            
+            [self.navigationController pushViewController:fav animated:NO];
+            
+            [UIView commitAnimations];
+            
             [fav release];
             fav = nil;
             direction = @"up";
@@ -146,7 +214,7 @@
     NSString *controllerName = @"Detail";
     Detail *nextPage = [[NSClassFromString(controllerName) alloc] initWithNibName:controllerName bundle:[NSBundle mainBundle]];
     nextPage.selectedPresentation = self.selectedPresentation;
-    nextPage.step = self.step + 1;
+    nextPage.step = self.step % 10 + 1;
     
     // Save NavigationController locally, to still have access to it in the second step.
     UINavigationController *navController = self.navigationController;
@@ -161,14 +229,14 @@
 
 - (void) backward {
     // Init animation
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:0.50];
-    
-    [UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:self.navigationController.view cache:YES];
     
     Detail *nextPage = [[Detail alloc] initWithNibName:@"Detail" bundle:[NSBundle mainBundle]];
     nextPage.selectedPresentation = self.selectedPresentation;
-    nextPage.step = self.step - 1;
+    self.step--;
+    if (self.step <= 0) {
+        self.step = 10;
+    }
+    nextPage.step = self.step;
     
     // Save NavigationController locally, to still have access to it in the second step.
     UINavigationController *navController = self.navigationController;
@@ -176,10 +244,26 @@
     // retain this viewcontroller, prevent dealloc.
     [[self retain] autorelease];
     
+	[UIView beginAnimations: @"moveField" context: nil];
+    	
+	[UIView setAnimationDelegate: self];
+    	
+	[UIView setAnimationDuration:	.5];
     
+    // For left to right transition animation
+	//[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:navController.view	 cache:NO];	
+    
+    //self.view.transform = CGAffineTransformMakeTranslation(-320,0);
+    nextPage.view.transform = CGAffineTransformMakeTranslation(320,0);
+	
     // Pop the current controller and replace with another.
     [navController popViewControllerAnimated:NO];
+    
     [navController pushViewController:nextPage animated:NO];
+    
+    [UIView commitAnimations];
+    
+    
 }
 
 

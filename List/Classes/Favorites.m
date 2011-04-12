@@ -50,14 +50,29 @@
 
 - (void) handleSwipeFrom: (UISwipeGestureRecognizer *) recogniser {	
     switch (recogniser.direction) {
-        case UISwipeGestureRecognizerDirectionDown:
+        case UISwipeGestureRecognizerDirectionDown:	
+            //self.navigationController.navigationBar.hidden = TRUE;
+            
+            [UIView beginAnimations: @"moveField" context: nil];
+            
+            [UIView setAnimationDelegate: self];
+            
+            [UIView setAnimationDuration:	1.5];
+            
+            // For left to right transition animation
+            [UIView setAnimationTransition:UIViewAnimationTransitionCurlDown	 forView:self.navigationController.view	 cache:NO];	
+            
             [self.navigationController popViewControllerAnimated:TRUE];
+            
+            [UIView commitAnimations];
             break;
     }
 }
 
 - (void)viewDidUnload
 {
+    
+    //self.navigationController.navigationBar.hidden = TRUE;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

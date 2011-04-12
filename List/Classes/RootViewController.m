@@ -68,7 +68,7 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return 2;
 }
 
 
@@ -83,7 +83,8 @@
     }
     
 	// Configure the cell.
-	[cell.textLabel setText: [NSString stringWithFormat:@"Führungsablauf %i", [indexPath row]]];
+    NSString *presTitle = [indexPath row] ? @"Basispräsentation" : @"Kurzpräsentation";
+	[cell.textLabel setText: [NSString stringWithFormat:presTitle, [indexPath row]]];
     cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }

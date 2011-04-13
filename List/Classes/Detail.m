@@ -144,7 +144,7 @@
             
             [UIView setAnimationDelegate: self];
             
-            [UIView setAnimationDuration:	1.5];
+            [UIView setAnimationDuration:	1.0];
             
             // For left to right transition animation
             [UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:self.navigationController.view	 cache:NO];	
@@ -253,12 +253,11 @@
     // For left to right transition animation
 	//[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:navController.view	 cache:NO];	
     
-    //self.view.transform = CGAffineTransformMakeTranslation(-320,0);
+    self.view.transform = CGAffineTransformMakeTranslation(320,0);
     nextPage.view.transform = CGAffineTransformMakeTranslation(320,0);
 	
     // Pop the current controller and replace with another.
     [navController popViewControllerAnimated:NO];
-    
     [navController pushViewController:nextPage animated:NO];
     
     [UIView commitAnimations];

@@ -57,7 +57,7 @@
             
             [UIView setAnimationDelegate: self];
             
-            [UIView setAnimationDuration:	1.5];
+            [UIView setAnimationDuration:	1.0];
             
             // For left to right transition animation
             [UIView setAnimationTransition:UIViewAnimationTransitionCurlDown	 forView:self.navigationController.view	 cache:NO];	
